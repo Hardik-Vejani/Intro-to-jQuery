@@ -1,0 +1,93 @@
+D:\ash\JqueryDemos\JqueryDemos\bin\JqueryDemos.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\JqueryDemos.pdb
+D:\ash\JqueryDemos\JqueryDemos\bin\Antlr3.Runtime.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.AspNet.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.Core.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\EntityFramework.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\Microsoft.Web.Infrastructure.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\Newtonsoft.Json.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Helpers.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Mvc.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Optimization.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Razor.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Deployment.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Razor.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\WebGrease.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\WebMatrix.Data.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\WebMatrix.WebData.dll
+D:\ash\JqueryDemos\JqueryDemos\bin\EntityFramework.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\Newtonsoft.Json.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Helpers.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Mvc.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.Razor.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Deployment.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Razor.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\WebMatrix.Data.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\WebMatrix.WebData.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.AspNet.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.Core.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.xml
+D:\ash\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\ash\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.csprojResolveAssemblyReference.cache
+D:\ash\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.dll
+D:\ash\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.pdb
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\JqueryDemos.dll.config
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\JqueryDemos.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\JqueryDemos.pdb
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Antlr3.Runtime.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.Core.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\EntityFramework.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Newtonsoft.Json.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Net.Http.Formatting.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Helpers.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Http.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Http.WebHost.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Mvc.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Optimization.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Razor.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Deployment.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Razor.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\WebGrease.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\WebMatrix.Data.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\WebMatrix.WebData.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\EntityFramework.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Newtonsoft.Json.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Net.Http.Formatting.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Helpers.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Http.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Http.WebHost.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Mvc.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.Razor.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Deployment.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\System.Web.WebPages.Razor.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\WebMatrix.Data.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\WebMatrix.WebData.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.Core.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.csprojResolveAssemblyReference.cache
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.dll
+C:\Users\hardikv\Desktop\jQuery PPT\JqueryDemos\JqueryDemos\obj\Debug\JqueryDemos.pdb

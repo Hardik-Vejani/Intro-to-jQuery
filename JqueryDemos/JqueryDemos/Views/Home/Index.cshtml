@@ -1,0 +1,94 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+           
+        </div>
+    </section>
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    
+    <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("p").click(function () {
+                $(this).hide();
+            });
+            $("#headerpanel").click(function () {
+                $("#childpanel").slideToggle("slow");
+            });
+                        
+            $('input#firstName').blur(function () {
+                var firstNameVal = $('input#firstName').val();
+                alert("First Name: " + firstNameVal);
+            });
+            $('input#lastName').blur(function () {
+                var lastNameVal = $('input#lastName').val();
+                alert("Last Name: " + lastNameVal);
+            });
+
+            $('select#course').change(function () {
+                var selectedCourse = $('select#course').val();
+                alert(selectedCourse);
+                $('div#setCourse').html(selectedCourse);
+            });
+        });
+        
+    </script>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        @*  Onclick Hide  *@
+        <p id="p_Ash" runat="server"> Hi this is Ashwini working on JQuery</p>
+        <p id="p_Amit" runat="server"> Hi this is Amit working on Unity Framework</p>
+        <p id="p_Neha" runat="server">Hi this is Neha working on Linq</p>
+        <br />
+               
+    </div>
+        <br />
+
+
+        @* Silder  *@
+         <div id="headerpanel" style="width:200px;height:20px;background-color:red" runat="server"> Click here to slide down panel </div>
+        <div id="childpanel" style="width:200px;height:100px;background-color:aqua" runat="server">Hello World</div>
+        <br />              
+
+        @*Blur Event*@
+
+       <h1>jQuery blur event example</h1>
+        <b>First Name: </b><input id="firstName" name="firstName" />
+        <br>
+        <b>Last Name: </b><input id="lastName" name="lastName" />
+
+        <br />
+        @*Change Event*@
+        <h1>Change Event Example</h1>
+  Please select:
+  <select name="course" id="course">
+    <option value="MCA">MCA</option>
+    <option value="BCA">BCA</option>
+    <option value="DCA">DCA</option>
+    <option value="PGDCA">PGDCA</option>
+    <option value="MBA">MBA</option>
+    <option value="BBA">BBA</option>
+  </select>
+  <br><br><br><br>
+  You are in <b><div id="setCourse"></div></b>
+    </form>
+</body>
+
+    
+</html>

@@ -1,0 +1,60 @@
+﻿@model JQueryDemo.Models.StudentModel
+@{
+    ViewBag.Title = "GetStudentsData";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Students Details</h2>
+
+<div>
+    <table id="jqStudentsData"></table>
+</div>
+<div id="jqStudentsDataPager">
+</div>
+
+<script type="text/javascript">
+    //Start jQuery Grid View Binding for Contract File Details
+    $("#jqStudentsData").jqGrid({
+        // Ajax related configurations
+        url: '@Url.Action("StudentsLoadGrid", "Students")',
+        postData: {}, //hardcoded for testing
+        datatype: "json",
+        mtype: "POST",
+        ajaxGridOptions: { cache: false },
+        // Specify the column names
+        colNames: ["", "Name", "Gender", "Total Marks", "Delete"],
+        // Configure the columns
+        colModel: [
+        { name: "ID", index: "ID", hidden: true, width: 100, align: "left" },
+        { name: "Name", index: "Name", width: 100, align: "left" },
+        { name: "Gender", index: "Gender", width: 100, align: "left" },
+        { name: "TotalMarks", index: "TotalMarks", width: 100, align: "left" },
+        {
+            name: "Delete",
+            index: "Delete",
+            width: 25,
+            align: "center",
+            sortable: false,
+            formatter: function () { return '<img src="../../Images/delete-icon.png" width="21px" height="25px">'; }
+        }
+        ],
+        width: 500,
+        // Paging
+        toppager: true,
+        jsonReader: { repeatitems: false },
+        pager: $("#jqStudentsDataPager"),
+        rowNum: 5,
+        rowList: [5, 10, 20],
+        viewrecords: true, // Specify if "total number of records" is displayed
+        height: 'auto',
+        autowidth: false,
+        //caption: "Contract File details",
+        //loadonce: true,
+        gridComplete: function () {
+        },
+        onCellSelect: function (rowid, iCol) {
+            debugger;
+        }
+    });
+</script>
+

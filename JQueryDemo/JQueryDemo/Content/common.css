@@ -1,0 +1,161 @@
+
+/*jqgrid styling*/
+.tablestyle3{width:96%;margin:0 auto;}
+.ui-jqgrid{border-top:solid 4px #777f85;}
+.Container96 .tablestyle3{width:100%}
+.tablestyle3 .ui-widget-content{width:100% !important;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-view             {width:100% !important;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-toppager         {width:100% !important;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-pager            {width:100% !important;background-color:#C7CED4;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-hdiv             {width:100% !important;}
+.tablestyle3 .ui-jqgrid-bdiv                        {width:100% !important;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-htable           {width:100% !important;}      
+.tablestyle3 .ui-jqgrid .ui-jqgrid-btable           {width:100% !important;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-hbox             {padding-right:0px;}
+.tablestyle3 .ui-jqgrid .ui-jqgrid-hbox             {float:none;}
+/*new*/
+.ui-jqgrid-htable, .ui-jqgrid-btable { border-right: solid 1px #c7ced4;}
+.ui-jqgrid tr.ui-row-ltr td {border-left: solid 1px #dcddde; border-right: none; border-bottom-color: #dcddde;}
+.ui-jqgrid tr.jqgrow td { padding:7px 10px 5px;}
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr{vertical-align:top;color:#5d676f; font-size:1.200em; font-weight:normal;text-align:left;border-left:solid 1px #dcddde;padding-top:6px;padding-bottom:6px; background: #c7ced4;}
+
+.ui-th-column, .ui-jqgrid .ui-jqgrid-htable th.ui-th-column{text-align:left;}
+.ui-th-ltr:last-child, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr:last-child{border-right:none;}
+.ui-jqgrid .ui-jqgrid-htable th div{margin-left:8px;}
+.ui-jqgrid tr.jqgrow:nth-child(2n+1){background-color:#ededed !important;}
+.ui-jqgrid tr.jqgrow:nth-child(2n){background-color:#ffffff !important;}
+
+.ui-jqgrid tr.jqgrow td:last-child{border-right:none;}
+.jqgrow td img{cursor:pointer;}
+.ui-jqgrid .ui-jqgrid-btable tr.ui-state-highlight{background-color:#b4bcc3 !important;}
+.jqgrow td input{width:100% !important;height:25px;border:solid 1px #cfcfcf;padding:0px 0px 0px 2px;}
+.jqgrow td select{width:100% !important;height:27px;border:solid 1px #cfcfcf;font-size:1.000em; color: #5d676f; }
+.jqgrow td .sbOptions{}
+.ui-jqgrid-htable{border-bottom:solid 1px #efefef;}
+.ui-jqgrid tr.jqgrow td select{width: 100% !important;height: 27px !important;border: solid 1px #cfcfcf !important; padding: 0px 0px 0px 2px !important;}
+.ui-jqgrid tr.jqgrow option{font-size: 1.170em;color: #5d676f;}
+
+
+
+/*table styling*/
+
+.TableJqgrid{border-top:solid 4px #777f85;border-bottom:solid 35px #c7ced4;}
+.tableHeaders{vertical-align:top;background-color:#c7ced4; color:#5d676f; font-size:1.200em; font-weight:normal;  text-align:left;padding-left:10px;border-right:solid 2px #dcddde;/*line-height:36px;*/padding-top:6px;padding-bottom:6px;padding-right:10px;}
+.tableHeaders:last-child{border-right:none;}
+.tableRows>td{border-right:solid 2px #dcddde;color:#5c666e;font-size: 14px; font-weight:normal; text-align:left;vertical-align:top;padding:6px 10px 7px;}
+.tableRows>td:last-child{border-right:none;}
+.tableRows:nth-child(2n){background-color:#ededed;}
+.tableRows:nth-child(2n+1){background-color:#ffffff;}
+input[type="text"].hasDatepicker{width: 205px;}
+.tableHeadersSecondary{background-color:#d5dade;color:#5d676f;font-size:1.300em; font-weight:normal;text-align:left;padding-left:17px;border-right:solid 2px #dcddde;/*line-height:36px;*/padding-top:6px;padding-bottom:6px;}
+.TopRow td,.TopRow th{background-color:#767e85;color:#ffffff;border-right:solid 2px #dcddde;padding-left:10px;padding-right:10px;font-size:1.170em; font-weight:normal;text-align:left;vertical-align:top;padding-top:6px;padding-bottom:6px;}
+.TopRow td:last-child,.TopRow th:last-child{border-right:none;}
+.bottomcount{background-color: #767E85; padding: 10px 18px;color:#fff;}
+
+/*table with scroll*/
+.outer-container{background-color: #c7ced4;width:100%;margin-top:30px; border-top: solid 4px #777f85;}
+.outer-container table{ table-layout:fixed;width:400px;border-collapse:collapse;}
+.outer-container table td{border-left:solid 1px transparent;}
+.table-body table{border-bottom:solid 35px #c7ced4;}
+.table-body table .tableRows>td{border-bottom:1px solid transparent;border-top:1px solid transparent;}
+.outer-container table td{border-bottom:1px solid transparent;}
+.inner-container{overflow: hidden;}
+.table-body{overflow: auto;height:330px;}
+
+/*dialog buttonset*/
+.ui-dialog-buttonset .ui-button{background-color: #8e98a0;color:#ffffff;font-size:1.300em;border:none; padding: 6px 14px; cursor:pointer; letter-spacing: 0.05em;} 
+/*jqgrid button image*/
+
+
+/*.ui-icon-triangle-1-n{background-position:0 -16px;}
+.ui-icon-triangle-1-s{background-position:-64px -16px;}*/
+
+/*onclick of link in jqgrid*/
+.exitbutton{float:left;padding-left:30px;background:url('../../Images/New Design/popup-arrow.png') transparent 6px 10px no-repeat;}
+.exitbutton li{background:url('../../Images/New Design/nav-popup-bg.png') repeat;margin-bottom:1px;cursor:pointer;padding:12px;width:195px;font-size:1.400em;color:#ffffff;line-height:18px;}
+.exitbutton li:hover{color:#404447;}
+
+/*grid dialogs styling (rima)*/
+.ui-jqdialog-title{display:none;}
+.ui-jqdialog{border:none;background-color:#D8DEE3;}
+.ui-widget-content .fm-button,.ui-widget-content .fm-button:hover{border:1px solid #707070;color:#000000;background-color:#D2D2D2;font-weight:bold;float:right;}
+.ui-jqdialog-content, .ui-jqdialog .ui-jqdialog-content{padding:10px 10px 0px;}
+.BorderNone{border:none;}
+#info_content,#alertcnt{color:#5D676F;  font-size: 1.3em;}
+/*#info_content,#alertcnt{color:#5D676F;font-family:SegoeUIL;font-size:16px;padding:10px 15px;}*/
+.ui-jqdialog-titlebar-close{background:url('../../../Images/New Design/popup-close.png') no-repeat;height:48px !important;width:48px !important;border:none;top:-11px !important;right:-24px !important;cursor:pointer;}
+
+/*for positioning dialog at the center - use of important to overwrite values coming dynamically (rima)*/
+.ui-jqdialog{left:50% !important;top:40% !important;overflow:visible !important;}
+#info_dialog{margin-left:-145px;overflow:visible !important;}
+#alertmod{margin-left:-100px;overflow:visible !important;}
+#closedialog{display:none;}
+
+/*for expense jqgrid scrolling*/
+/*#gbox_ReimbursementTable .ui-jqgrid-hdiv{width:1734px !important;}
+#gbox_ReimbursementTable .ui-jqgrid-bdiv{max-height:360px;overflow:auto;}
+#gview_ReimbursementTable{background-color:#C7CED4;}*/
+
+/*expense page back guidelines styling*/
+
+/*grids with scroll*/
+#gview_jqFinancePaymentTrackingTable .ui-jqgrid-bdiv{max-height:500px;overflow:auto;}
+
+
+.tablestyle3 p{color:#dd4242;margin-left:2px;}
+.buttonAsLink,.jqgrow td .buttonAsLink{border:none;background-color:transparent;cursor:pointer;text-decoration:underline;color:#5d676f;font-size:16px;} 
+
+/*fixes*/
+#employeeCertificateDetailTablePager_left,#AdminApprovalQualificationTablePager_left,#jqShowHistoryTablePager_left,#jqShowProjectApprovalTablePager_left,#jqShowRevisionHistoryTablePager_left,
+#ShowStatusConfirmationTablePager_left{width:auto !important;}
+#addDocumentFileDialog .BrowseSpacingFix p.qualif-detail{margin-top:-22px;}
+#addContractFileDialog .BrowseSpacingFix p.qualif-detail{margin-top:-10px;}
+#ApproveRevisionDetails .ClassDisplayLabel{line-height:20px;padding:0px;}
+#frmAddTotalEmployeeExperienceDetails table td .ClassDisplayLabel{font-size:1em;}
+.TextareaFix textarea{width:80% !important;}
+
+	/*#gbox_ReimbursementTable .ui-jqgrid-hdiv{width:1211px !important;}*/
+    .mrgnL30{margin-left: 25px;}
+    .mrgnR30{margin-right: 25px;}
+    /*expense page currency field issue (commented, in case of issue reoccurs use parent for it)*/
+    /*.ButtonContainer1{ width: 1000px;}*/
+ 
+    /*.ExpenseContainer .MainBody form label.datealign{margin-top: 10px;}*/
+    
+    
+    /*separation*/
+    #SeparationForm .leftcol,#SeparationForm .rightcol{width:50%;}
+
+     /*personal*/
+    .PersonalDetails .leftcol{margin-right: 6%;}      
+    .addcontact .rightcol{width:40%;}
+
+    /*timesheet*/
+
+
+   
+}
+
+.SmartT .TableJqgrid{border-bottom:none;}
+.hiddenBut.ButtonGray{margin:18px 0 16px 55px;}
+.gridLink{text-decoration:underline; cursor:pointer;}
+.italicNote{line-height: 34px;font-size: 1.110em;color: #5d676f;font-style: italic;}
+
+/* HR */
+.globalApprovalLeft.tablestyle3{float: left;width: 48%;}
+.globalApprovalRight.tablestyle3{float: right;width: 48%;}
+#DivPRNew .tablestyle3{width:100%;margin:0 auto;}
+
+
+
+/* new css */
+#frmUploadDocument .BrowserVisible {width: 265px;}
+#TxtTaskName            { width: 232px;}
+#TaskDescription        { width: 236px;}
+.clear-fix              { clear:both;}
+.FormContainerBox.AddProjectForm .ButtonContainer1 { margin: 18px 0px 20px 0;}
+.select-col-group .leftcol    { clear:none;}
+#spnTaskMessage         { line-height: 27px;  font-size: 1.170em; color: #5d676f;}
+#spnTaskMessage label   { width: 24%; float: left;}
+.FormContainerBox .ButtonContainer2 {margin: 28px 0px 20px 0;}
+.clear-none             { clear:none;}

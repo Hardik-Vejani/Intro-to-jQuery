@@ -1,0 +1,134 @@
+﻿@{
+    ViewBag.Title = "IndexTraversing";
+}
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style>
+  panel {
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    float: left;
+    border: 2px solid blue;
+  }
+  .blue {
+    background: blue;
+  }
+  span {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .example {
+    font-style: italic;
+  }
+  .highlight {
+    background-color: yellow;
+  }
+  
+  </style>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="~/Scripts/jquery-1.7.1.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                @*.parent*@
+                $("p").parent(".selected").css("background", "yellow");
+                @*.siblings*@
+                $("li.third-item").siblings().css("background-color", "aqua");
+                 @*.eq*@
+                $("body").find("panel").eq(2).addClass("blue");
+                 @*.each*@
+                $("span").click(function () {
+                    $("label").each(function () {
+                        $(this).toggleClass("example");
+                    });
+                });
+                @*.children*@ 
+                $("ul.level-2").children().css("background-color", "red");
+                @*.last*@ 
+                $("ul li").last().css("background-color", "blue");
+               
+            });
+        </script>
+    </head>
+    <body>
+        <table style="border:2px groove black">
+            <tr>
+                <td style="border:2px groove black">
+                     
+        <h1>.parent example</h1>
+        <div><p>Hello</p></div>
+        <div class="selected"><p>Hello Again</p></div>
+                </td>
+                 <td>
+                      @*.siblings*@
+        <h1>.siblings example</h1>
+       <ul>
+            <li>list item 1</li>
+            <li>list item 2</li>
+            <li class="third-item">list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+       </ul>
+                 </td>
+            </tr>
+            <tr>
+                 <td style="border:2px groove black">
+                      @*.eq*@
+        <h1>.eq example</h1>
+        <panel></panel>
+        <panel></panel>
+        <panel></panel>
+        <panel></panel>
+        <panel></panel>
+        <panel></panel>
+                 </td>
+                 <td  style="border:2px groove black">
+                       @*.each*@
+         <h1>.each example</h1>
+        To do list: <span>(click here to change)</span>
+        <label>Label1</label>
+        <label>Label1</label>
+                 </td>
+            </tr>
+            <tr>                            
+                 <td style="border:2px groove black">
+                     @*.children*@   
+                      <h1>.children example</h1>
+                     <ul class="level-1">
+                    <li class="item-i">I</li>
+                    <li class="item-ii">II
+                    <ul class="level-2">
+                    <li class="item-a">A</li>
+                    <li class="item-b">B
+                    <ul class="level-3">
+                    <li class="item-1">1</li>
+                    <li class="item-2">2</li>
+                    <li class="item-3">3</li>
+                    </ul>
+                    </li>
+                    <li class="item-c">C</li>
+                    </ul>
+                    </li>
+                    <li class="item-iii">III</li>
+                    </ul>
+                 </td>
+                 <td style="border:2px groove black">
+                     @*.last*@
+                     <h1>.last example</h1>
+                     <ul id="ul_last">
+                        <li>Abul</li>
+                        <li>Amit</li>
+                        <li>Chandradev</li>
+                        <li>Anand</li>
+                        <li>Mahesh</li>
+                     </ul>
+                 </td>
+            </tr>
+     
+        </table>
+    </body>
+</html>

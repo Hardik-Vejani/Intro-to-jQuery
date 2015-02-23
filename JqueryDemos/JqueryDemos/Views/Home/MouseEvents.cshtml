@@ -1,0 +1,184 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MouseEvents</title>
+    <style>
+        ul.tabs
+        {
+            margin: 0;
+            padding: 0;
+            float: left;
+            list-style: none;
+            height: 40px;
+            border-bottom: 1px solid #999;
+            border-left: 1px solid #999;
+            width: 30%;
+        }
+
+            ul.tabs li
+            {
+                float: left;
+                margin: 0;
+                padding: 0;
+                height: 39px;
+                line-height: 39px;
+                border: 1px solid #999;
+                border-left: none;
+                margin-bottom: -1px;
+                background: #e0e0e0;
+            }
+
+                ul.tabs li a
+                {
+                    text-decoration: none;
+                    color: #000;
+                    display: block;
+                    font-size: 1.2em;
+                    padding: 0 20px;
+                    border: 1px solid #fff;
+                }
+
+                    ul.tabs li a:hover
+                    {
+                        background: #ccc;
+                    }
+
+        html ul.tabs li.active, html ul.tabs li.active a:hover
+        {
+            background: #fff;
+            border-bottom: 1px solid #fff;
+        }
+
+        .tab_container
+        {
+            border: 1px solid #999;
+            border-top: none;
+            clear: both;
+            float: left;
+            width: 30%;
+            background: #fff;
+        }
+
+        .tab_content
+        {
+            padding: 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    @*.click() and .dblclick()*@
+    <h1>.click() , .dblclick() examples</h1>
+    <div id="target">
+        Double-click here
+    </div>
+    <div id="other">
+        Trigger the handler
+    </div>
+    <br />
+
+    @*.focusin and focusout event*@
+    <h1>.focusin() and .focusout() events example</h1>
+    <div>
+        Input Box:
+  <input type="text" id="inputBoxId" /><br />
+        <label id="lblInputBoxId"></label>
+    </div>
+    <br />
+
+
+    @*.mouseover and mouseleave event*@
+    <h1>.mouseover() and mouseleave() events example</h1>
+    Mouse over Count:<div id="MouseovercountId">0</div>
+    Mouse leave Count:<div id="MouseleavecountId">0</div>
+
+    <div class="container">
+
+
+        <h1>Tabs Example</h1>
+        <ul class="tabs">
+            <li><a href="#tab1">TAB 1</a></li>
+            <li><a href="#tab2">TAB 2</a></li>
+            <li><a href="#tab3">TAB 3</a></li>
+            <li><a href="#tab4">TAB 4</a></li>
+        </ul>
+        <div class="tab_container">
+            <div id="tab1" class="tab_content">
+                <h2>This is the content of tab 1 </h2>
+            </div>
+            <div id="tab2" class="tab_content">
+                <h2>This is the content of tab 2 </h2>
+            </div>
+            <div id="tab3" class="tab_content">
+                <h2>This is the content of tab 3 </h2>
+            </div>
+            <div id="tab4" class="tab_content">
+                <h2>This is the content of tab 4 </h2>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.4.2.js"></script>
+<script src="~/Scripts/jquery-1.7.1.min.js"></script>
+<script>
+         @*.click() and .dblclick()*@
+    $(document).ready(function () {
+        $("#target").dblclick(function () {
+            alert("Handler for .dblclick() called.");
+        });
+        $("#other").click(function () {
+            $("#target").dblclick();
+        });
+
+        @*.focusin and focusout event examples*@
+        $("#lblInputBoxId").text("");
+        $("input#inputBoxId").focus();
+        
+        $("#inputBoxId").focusin(function () {
+            $("#lblInputBoxId").text("This is focus in event").css({ 'color': 'aqua', 'font-size': '20px' });
+        });
+
+        //Lost focus when document is ready
+        $("#inputBoxId").focusout(function () {
+            $("#lblInputBoxId").text("This is focus out event").css({'color': 'orange', 'font-size' : '20px'});
+        });
+        //Get focus when document is ready
+
+
+            @*.mouseover and mouseleave  event*@
+        var num = 0;
+        $('input#inputBoxId').mouseover(function () {
+            $('div#MouseovercountId').html(num);
+            num++;
+        });
+        var num1 = 0;
+        $('input#inputBoxId').mouseleave(function () {
+            $('div#MouseleavecountId').html(num1);
+            num1++;
+        });
+        $("ul.tabs li").click(function () {
+            $("ul.tabs li").removeClass("active");
+            $(this).addClass("active");
+            $(".tab_content").hide();
+            var activeTab = $(this).find("a").attr("href");
+            $(activeTab).fadeIn();
+            return false;
+        });
+        $(".tab_content").hide();
+        //Activate first tab
+        $("ul.tabs li:first").addClass("active").show();
+        //Display tab 1 content
+        $(".tab_content:first").show();
+    });
+
+</script>
+</html>

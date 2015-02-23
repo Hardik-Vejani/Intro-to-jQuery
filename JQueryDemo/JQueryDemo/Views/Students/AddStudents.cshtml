@@ -1,0 +1,226 @@
+﻿@model JQueryDemo.Models.StudentModel
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+@{
+    ViewBag.Title = "AddStudents";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddStudents</h2>
+@using (@Html.BeginForm("", "", FormMethod.Post, new { id = "formAddStudents" }))
+{
+    @Html.HiddenFor(m => m.ID)
+    @Html.ValidationSummary(true)
+    <div>
+        <div>
+            <div>@Html.LabelFor(x => x.Name)</div>
+            <div>
+                @Html.TextBoxFor(x => x.Name)
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+        </div>
+        <div>
+            <div>@Html.LabelFor(x => x.Gender)</div>
+            <div>
+                @Html.TextBoxFor(x => x.Gender)
+                @Html.ValidationMessageFor(x => x.Gender)
+            </div>
+        </div>
+        <div>
+            <div>@Html.LabelFor(x => x.TotalMarks)</div>
+            <div>
+                @Html.TextBoxFor(x => x.TotalMarks)
+                @Html.ValidationMessageFor(x => x.TotalMarks)
+            </div>
+        </div>
+        <div>
+            <div>@Html.LabelFor(x => x.BirthDate)</div>
+            <div>
+                @Html.TextBoxFor(model => model.BirthDate, String.Format("{0:MM/dd/yyyy}", Model.BirthDate), new { @id = "birthDate", @readonly = "readonly" })
+                @Html.ValidationMessageFor(x => x.BirthDate)
+            </div>
+        </div>
+    </div>
+    <br />
+    <input type="button" id="btnSubmit" value="Submit" />
+    <input type="reset" id="btnReset" value="Reset" />
+    <input type="button" id="btnShowData" value="Show Data" />
+    @*<input type="button" id="btnStringify" value="Post Stringify Data" onclick="JsonStringifyFunction()" />*@
+}
+<div id="AddStudentSuccess" style="display:none"><p>Student added successfully.</p></div>
+<div id="AddStudentError" style="display:none"><p>Student data could not be saved.</p></div>
+<div id="DivShowData" style="display:none"></div>
+<br />
+<br />
+<div>
+    <h3>jQuery Autocomplete </h3>
+    <div>
+        Student Name :
+    </div>
+    <div>
+        <input type="text" name="searchValue" id="txtSearchStudent" height="20px" />
+    </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#birthDate').datepicker({ dateFormat: "mm/dd/yy", changeMonth: true, changeYear: true, yearRange: "-40:", maxDate: "0", showOn: "both", buttonImage: "../../Images/calender-icon.png", buttonImageOnly: true });
+
+        //$('#Gender').rules("add", {
+        //    //required: function () {
+        //    //    debugger;
+        //    //    return ($("#Gender").val() == "Male");
+        //    //},
+        //    //required: function () {
+        //    //    if ($("#Gender").val() == "Male") {
+        //    //        return true;
+        //    //    }
+        //    //    else {
+        //    //        return false;
+        //    //    }
+        //    //},
+        //    messages:
+        //    {
+        //        required: "Gender should be either Male or Female."
+        //    }
+        //});
+    });
+
+    $("#btnSubmit").bind("click", function () {
+        if ($("#formAddStudents").valid()) {
+            DisplayLoadingDialog();
+            $.ajax({
+                url: '@Url.Action("SaveStudentDetails", "Students")',
+                type: 'POST',
+                cache: false,
+                data: $('#formAddStudents').serialize(),
+                success: function (results) {
+                    $("#loading").dialog("close");
+                    $("#loading").dialog("destroy");
+
+
+                    if (results.status == true) {
+
+                        $("#AddStudentSuccess").dialog({
+                            resizable: false,
+                            autoOpen: true,
+                            height: 'auto',
+                            width: 300,
+                            modal: true,
+                            open: function () {
+                            },
+                            buttons: {
+                                Ok: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
+                    }
+                    else if (results.status == false) {
+                        $("#AddStudentError").dialog({
+                            resizable: false,
+                            autoOpen: true,
+                            height: 140,
+                            width: 300,
+                            modal: true,
+                            //dialogClass: "noclose",
+                            buttons: {
+                                Ok: function () {
+                                    $(this).dialog("close");
+                                }
+                            }
+                        });
+                    }
+                    else if (results.status == "Error") {
+                        DisplayErrorDialog("Add Students");
+                    }
+                },
+                error: function (results) {
+                    DisplayErrorDialog("Add Students");
+                }
+            });
+        }
+        else
+            return false;
+    });
+
+    $("#btnShowData").bind('click', function () {
+        DisplayLoadingDialog();
+        $.ajax({
+            url: '@Url.Action("ShowStudentData", "Students")',
+            type: 'GET',
+            cache: false,
+            data: {},
+            success: function (results) {
+                $("#loading").dialog("close");
+                $("#loading").dialog("destroy");
+                $("#DivShowData").empty().append(results);
+                $("#DivShowData").dialog({
+                    closeOnEscape: false,
+                    resizable: false,
+                    height: 'auto',
+                    width: 1160,
+                    title: "Student Details",
+                    modal: true,
+                    close: function (event, ui) {
+                        $("#DivShowData").dialog("destroy");
+                    }
+                });
+            },
+            error: function (results) {
+                $("#loading").dialog("close");
+                $("#loading").dialog("destroy");
+
+            }
+        });
+    });
+
+    $("#txtSearchStudent").autocomplete({
+        source: function (request, response) {
+            $.getJSON('@Url.Action("StudentNameAutoComplete", "Students")', { term: request.term }
+                , function (data) {
+                    response($.map(data, function (el) {
+                        var studentDetails = el.ID + " {" + el.Name + "}";
+                        return {
+                            label: studentDetails,
+                            value: el.Name,
+                            text: el.ID,
+                            id: el.ID
+                        };
+                    }));
+                });
+        },
+        minlength: 2,
+        select: function (event, ui) {
+
+            alert("Selected name: " + ui.item.value);
+        }
+
+    });
+
+
+    function JsonStringifyFunction() {
+        var postArray = [];
+        var StudentModel = {
+            ID: 1,
+            Name: "Hardik Vejani",
+            Gender: "Male",
+            TotalMarks: 99.00,
+            BirthDate: null
+        };
+        postArray.push(StudentModel);
+        $.ajax({
+            url: '@Url.Action("StudentDataStringify", "Students")',
+            type: 'POST',
+            cache: false,
+            //contentType: 'application/json',
+            //data: { model: JSON.stringify(postArray) },
+            data: JSON.stringify({ model: postArray }),
+            success: function (data) {
+            }
+        });
+    }
+
+
+</script>

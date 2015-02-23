@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+
+
+<h2>Greetings</h2>
+<div class="container">
+    <div class="inner">Hello</div>
+    <div class="inner">Goodbye</div>
+    <input type="text" id="txtName" value="Type Here"/>
+</div>
+
+@*<div id="box1" class="clsBox">1</div>
+<div id="box2" class="clsBox">2</div>
+<div id="box3" class="clsBox">3</div>
+<div id="box4" class="clsBox">4</div>*@
+
+<style>
+    /*div {
+        height: 50px;
+        margin: 5px;
+        padding: 5px;
+        float: left;
+    }*/
+
+    /*#box1 {
+        width: 50px;
+        color: yellow;
+        background-color: blue;
+    }
+
+    #box2 {
+        width: 80px;
+        color: rgb(255, 255, 255);
+        background-color: rgb(15, 99, 30);
+    }
+
+    #box3 {
+        width: 40px;
+        color: #fcc;
+        background-color: #123456;
+    }
+
+    #box4 {
+        width: 70px;
+        background-color: #f11;
+    }*/
+</style>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/test.js"></script>
+<script type="text/javascript">
+    $(function () { // start document.ready
+        alert(".cshtml ready hit");
+        testFunc();
+        $('#btnClick').click(function () {
+            //alert($("#txtName").attr('value'));
+            //alert($("#txtName").prop('value'));
+            //$("#txtName").removeAttr('disabled');
+            $("#txtName").prop('disabled', false);
+            // $(this).next.append('<p>this is a copy of the previous paragraph </p>');
+        });
+
+        //$('#btnClick').on("click", function () {
+        //    debugger;
+        //    // $(this).next().append('<p>this is a copy of the previous paragraph </p>');
+        //});
+
+        //$('#btnClick').off("click");
+
+        //$(".container").append("<p>Test</p>");
+        //debugger;
+        $("#txtName").attr('disabled', true);
+       // alert($("#txtName").attr('value'));
+       // alert($("#txtName").prop('value'));
+    });// end of document ready
+
+    $('#btnClick').click(function () {
+       // debugger;
+        // $(this).next.append('<p>this is a copy of the previous paragraph </p>');
+    });
+
+    $('#btnClick').on("click", function () {
+       // debugger;
+        // $(this).next().append('<p>this is a copy of the previous paragraph </p>');
+    });
+    function testFunc()
+    {
+        $(".container").append("<input type='button' id='btnClick' value='Click me' />");
+
+    }
+    alert(".cshtml functions hit");
+
+    //window.onload = function () {
+    //    debugger;
+    //    alert("window load hit");
+    //}
+    
+    //$(".clsBox").click(function () {
+    //   // debugger;
+    //    var html = ["The clicked div has the following styles:"];
+    //    var styleProps = $(this).css([
+    //    "width", "height", "color", "background-color"
+    //    ]);
+    //    $.each(styleProps, function (a, b) {
+    //        //debugger;
+    //        html.push(a + ": " + b);
+    //    });
+    //    $("#result").html(html.join("<br>"));
+    //});
+
+    $(window).load(function () {
+
+        alert("document load hit");
+    });
+</script>

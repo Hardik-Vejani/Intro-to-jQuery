@@ -1,0 +1,107 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>IndexTraversingNew</title>
+
+     <style>
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 4px outset;
+    background: green;
+    text-align: center;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+  .blue {
+    background: blue;
+  }
+  .red {
+    background: red;
+  }
+  span {
+    color: blue;
+    font-weight: bold;
+  }
+  p {
+    color: red;
+    font-weight: bolder;
+    background: yellow;
+    margin: 3px;
+    clear: left;
+    display: none;
+  }
+ 
+  .siblings * { 
+    display: block;
+    border: 2px solid lightgrey;
+    color: lightgrey;
+    padding: 5px;
+    margin: 15px;
+}
+  </style>
+
+ 
+ 
+</head>
+<body>
+    @*.is*@
+    
+    <h1>.is example</h1>
+    <div></div>
+<div class="blue"></div>
+<div></div>
+<div class="red"></div>
+<div><br/><span>Peter</span></div>
+<div class="blue"></div>
+<p>&nbsp;</p>
+    
+           <br /><br /><br /><br /><br /><br />
+    @*.next*@
+   <h1>.next example</h1>
+   <panel style="width:100px;" class="siblings">
+  <ul>ul (parent)  
+    <li>li (sibling)</li>
+    <li>li (sibling)</li>
+    <li class="start">li (sibling with class name "start")</li>
+    <li>li (the next sibling of li with class name "start")</li>
+    <li>li (sibling)</li>
+  </ul>   
+</panel>
+        
+
+</body>
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script>
+        $("div").one("click", function () {
+            @*.is*@
+            if ($("div").is(":first-child")) {
+                $("p").text("It's the first div.");
+            } else if ($("div").is(".blue,.red")) {
+                $("p").text("It's a blue or red div.");
+            } else if ($("div").is(":contains('Peter')")) {
+                $("p").text("It's Peter!");
+            } else {
+                $("p").html("It's nothing <em>special</em>.");
+            }
+            $("p").hide().slideDown("slow");
+            $("div").css({
+                "border-style": "inset",
+                cursor: "default"
+            });
+                     
+        });
+        @*.next*@  
+        $("li.start").next().css({ "color": "red", "border": "2px solid red" });
+</script>
+</html>

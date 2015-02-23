@@ -1,0 +1,91 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Attributes</title>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <style>
+  p {
+    margin: 20px 0 0;
+    color: red;
+  }
+  b {
+    color: blue;
+  }
+  button {
+    margin: 5px;
+  }
+  button#theone {
+    color: red;
+    background: yellow;
+  }
+  span {
+    color: blue;
+  }
+  </style>
+</head>
+<body>
+     @*.attr() and .prop()*@
+    <h1>.attr() and .prop examples</h1>
+    <input id="check1" type="checkbox" checked="checked">
+<label for="check1">Check me</label>
+<p></p>
+
+    @*.bind() and .unbind()*@
+    <h1>.bind() , .unbind() and .on() and off() example</h1>
+    <button id="theone">Does nothing...</button>
+<button id="bind">Bind Click</button>
+<button id="unbind">Unbind Click</button>
+<div style="display:none;">Click!</div>
+
+    
+</body>
+    @*.attr() and .prop()*@
+    <script>
+        $("input").change(function () {
+            var $input = $(this);
+            $("p").html(
+              ".attr( \"checked\" ): <b>" + $input.attr("checked") + "</b><br>" +
+              ".prop( \"checked\" ): <b>" + $input.prop("checked") + "</b><br>" +
+              ".is( \":checked\" ): <b>" + $input.is(":checked")) + "</b>";
+        }).change();
+
+        @*.bind() and .unbind()*@
+        //function aClick() {
+        //    $("div").show().fadeOut("slow");
+        //}
+        //$("#bind").click(function () {
+        //    $("#theone")
+        //      .bind("click", aClick)
+        //      .text("Can Click!");
+        //});
+        //$("#unbind").click(function () {
+        //    $("#theone")
+        //      .unbind("click", aClick)
+        //      .text("Does nothing...");
+        //});
+        @*.on() and .off()*@
+        function flash() {
+            $("div").show().fadeOut("slow");
+        }
+        $("#bind").click(function () {
+            $("body")
+              .on("click", "#theone", flash)
+              .find("#theone")
+                .text("Can Click!");
+        });
+        $("#unbind").click(function () {
+            $("body")
+              .off("click", "#theone", flash)
+              .find("#theone")
+                .text("Does nothing...");
+        });
+        </script>
+    
+</html>

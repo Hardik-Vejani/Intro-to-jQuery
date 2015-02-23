@@ -1,0 +1,47 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Manupulation</title>
+    <style>
+  p {
+    background: yellow;
+  }
+  
+  div {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+  }
+  </style>
+     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.4.2.js"></script>
+    
+</head>
+<body>
+    <h1>.append() and .prepend example</h1>
+    <p>Welcome to Doyen </p>
+
+    <h1>.css example</h1>
+    <span id="result">&nbsp;</span>
+<div style="background-color:blue;"></div>
+<div style="background-color:rgb(15,99,30);"></div>
+<div style="background-color:#123456;"></div>
+<div style="background-color:#f11;"></div>
+</body>
+   <script>
+       $("p").append(document.createTextNode("APPENDED"));
+       $("p").prepend("<b>PREPENDED </b>");
+       $("div").click(function () {
+           var color = $(this).css("background-color");
+           $("#result").html("That div is <span style='color:" +
+             color + ";'>" + color + "</span>.");
+       });
+</script>
+</html>
